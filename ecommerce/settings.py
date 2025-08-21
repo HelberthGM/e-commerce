@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',  # Custom app for core functionalities
     'shop_app',  # app for shop functionalities
-    'rest_framework'
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
