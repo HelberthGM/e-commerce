@@ -14,20 +14,19 @@ class CustomUserAdmin(UserAdmin):
     )
 
     # Campos visibles al crear un usuario
-    add_fieldsets = (
+    add_fieldsets = UserAdmin.add_fieldsets + (
         (None, {
             'classes': ('wide',),
             'fields': (
-                'username', 'email', 'first_name', 'last_name',
+                'email', 'first_name', 'last_name',
                 'city', 'country', 'address', 'phone',
-                'password1', 'password2'
             ),
         }),
     )
 
     # Lista de usuarios en el admin
-    list_display = ('username', 'email', 'first_name', 'last_name', 'city', 'country', 'is_staff')
-    search_fields = ('username', 'email', 'first_name', 'last_name', 'city', 'country')
-    ordering = ('username',)
+    list_display = ("username", "email", "first_name", "last_name", "city", "country", "is_staff", "is_active")
+    search_fields = ("username", "email", "first_name", "last_name", "city", "country")
+    ordering = ("username",)
 
 admin.site.register(CustomUser, CustomUserAdmin)

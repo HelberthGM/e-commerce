@@ -40,9 +40,12 @@ INSTALLED_APPS = [
     'core',  # Custom app for core functionalities
     'shop_app',  # app for shop functionalities
     'rest_framework',
+    # Third-party apps
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,6 +54,26 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+#CORS_URLS_REGEX = r'^/api/.*$'
+
+# settings/development.py
+CORS_ALLOWED_ORIGINS = [
+   # "http://localhost:3000",  # React development server
+    "http://localhost:5173",  
+    "http://127.0.0.1:5174",  # Alternative localhost format
+    "http://127.0.0.1:5175",
+]
+
+# Only for development testing - never use in production
+#CORS_ALLOW_ALL_ORIGINS = True
+
+# # settings/production.py
+# CORS_ALLOWED_ORIGINS = [
+#     "https://yourdomain.com",
+#     "https://www.yourdomain.com",
+#     "https://app.yourdomain.com",
+# ]
 
 ROOT_URLCONF = 'ecommerce.urls'
 
