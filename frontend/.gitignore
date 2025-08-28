@@ -1,15 +1,3 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.sqlite3
-
-# Virtualenv
-shopenv/
-venv/
-.env
-
 # Logs
 logs
 *.log
@@ -19,7 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Node
 node_modules
 dist
 dist-ssr

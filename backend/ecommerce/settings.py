@@ -59,7 +59,6 @@ MIDDLEWARE = [
 
 # settings/development.py
 CORS_ALLOWED_ORIGINS = [
-   # "http://localhost:3000",  # React development server
     "http://localhost:5173",  
     "http://127.0.0.1:5174",  # Alternative localhost format
     "http://127.0.0.1:5175",
