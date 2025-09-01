@@ -16,7 +16,7 @@ const Footer = () => {
                 <a href="" className="text-white mx-2"><FaSquareXTwitter /></a>
                 <a href="" className="text-white mx-2"><FaInstagram /></a>
             </div>
-            <p className='small mb-0'>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+            <p className='small mb-0'>&copy; {new Date().getFullYear()} Helberth Garcia. All rights reserved.</p>
 
         </div>
     </footer>
