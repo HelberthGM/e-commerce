@@ -1,11 +1,12 @@
 import NavBar from './components/ui/NavBar'
 import Footer from './components/ui/Footer'
+import Header from './components/home/Header'
 
 const App = () => {
   return (
     <div>
       <NavBar />
-      <h1>App</h1>
+      <Header/>
       <Footer />
     </div>
   )
